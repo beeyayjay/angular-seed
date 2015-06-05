@@ -1,0 +1,19 @@
+<div class="row" ng-controller="WxController">
+    <div class="large-12 columns" ng-if="loading">
+        <h3>Loading...</h3>
+    </div>
+    <div class="large-12 columns" ng-if="!loading && error">
+        <h3>Error</h3>
+        <p>{{error}}</p>
+    </div>
+    <div class="large-12 columns" ng-if="!loading &&!error">
+        <h3>Weather in {{name}}</h3>
+        <div ng-repeat="w in weather">
+            <p>{{w.main}}: {{w.description}}</p>
+        </div>
+        <p>Current Temperature: {{main.temp}}&deg; F</p>
+        <p>High: {{main.temp_max}}&deg; Low: {{main.temp_min}}&deg;</p>
+        <p>Humidity: {{main.humidity}}%</p>
+        <p ng-if="wind.speed">Wind {{wind.deg}}&deg; at {{wind.speed}} <span ng-if="wind.gust">gusting {{wind.gust}}</span></p>
+    </div>
+</div>
