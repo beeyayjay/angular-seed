@@ -4,6 +4,7 @@ A seed project for [AngularJS]-based web applications.
 
 ### Features
 
+* Angular 1.4.x
 * [NodeJS] with [Express] for local web development
 * [Bower] and [Gulp]
 * [Foundation]-based and naturally [Sass]-y
